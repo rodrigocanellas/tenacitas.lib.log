@@ -18,14 +18,11 @@ The corresponding repository must be cloned aside `tenacitas.lib.log`
 
 `tenacitas.lib.test`
 
-
 ### Building
 
 #### With your build system
 The only requirement is that the path to the directory above is in the compiler include path, `-I` in `gcc`.
 
-#### Building the tests with QtCreator
-The repository `tenacitas.bld` must be cloned aside `tenacitas.lib.log`. The `.pro` file is in `tenacitas.bld.qtcreator/tst/tenacitas.lib.log` directory.
-
-
+#### Building tests QtCreator
+The file `tenacitas.lib.log/bld/qtcreator/tenacitas.lib.log.pro` contains the configuration for building the tests.
 
