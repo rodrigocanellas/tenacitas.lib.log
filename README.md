@@ -1,5 +1,5 @@
 # tenacitas.lib.log
-Another log library
+Another (header only) log library
 
 
 ## Dependending to others `tenacitas.lib.*` 

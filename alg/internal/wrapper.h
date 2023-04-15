@@ -259,12 +259,12 @@ private:
     strftime(_time_str, sizeof _time_str, "%Y-%m-%d %H:%M:%S",
              localtime(&_now_s));
 
-    _stream << p_level << m_separator << _time_str
-            << ','
-            //            << number::alg::format(
-            //                   static_cast<uint32_t>(_now_us - (_now_s *
-            //                   1000000)), 6, '0', number::alg::align::right)
-            << _now_us - (_now_s * 1000000) << m_separator
+    _stream << p_level << m_separator << _time_str << ','
+            << number::alg::format(
+                   static_cast<uint32_t>(_now_us - (_now_s * 1000000)), 6, '0',
+                   number::alg::align::right)
+            << m_separator
+            //            << _now_us - (_now_s * 1000000) << m_separator
             << std::this_thread::get_id() << m_separator << std::setfill(' ')
             << std::left << std::setw(max_file_name_lenght)
             << std::filesystem::path(p_file).filename().string() << m_separator
